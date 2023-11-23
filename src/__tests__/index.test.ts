@@ -1,9 +1,9 @@
-import { BigNumJSON } from '../index';
+import { BigJason } from '../index';
 
-describe('BigNumJSON', () => {
+describe('BigJason', () => {
   describe('parse', () => {
     test('simple JSON', () => {
-      const parsedObject = BigNumJSON.parse('{"a_number": 1, "b_number": 2, "c_bigint": 123456789012345678999 }');
+      const parsedObject = BigJason.parse('{"a_number": 1, "b_number": 2, "c_bigint": 123456789012345678999 }');
       expect(parsedObject).toEqual({
         a_number: 1,
         b_number: 2,
@@ -12,7 +12,7 @@ describe('BigNumJSON', () => {
     });
 
     test('JSON with big numbers in arrays', () => {
-      const parsedObject = BigNumJSON.parse('{"a_number": 1, "b_number": 2, "c_bigint": [123456789012345678999, 123456789012345678999] }');
+      const parsedObject = BigJason.parse('{"a_number": 1, "b_number": 2, "c_bigint": [123456789012345678999, 123456789012345678999] }');
       expect(parsedObject).toEqual({
         a_number: 1,
         b_number: 2,
@@ -21,7 +21,7 @@ describe('BigNumJSON', () => {
     });
 
     test('JSON with big numbers in objects', () => {
-      const parsedObject = BigNumJSON.parse('{"a_number": 1, "b_number": 2, "c_bigint": { "d_bigint": 123456789012345678999 } }');
+      const parsedObject = BigJason.parse('{"a_number": 1, "b_number": 2, "c_bigint": { "d_bigint": 123456789012345678999 } }');
       expect(parsedObject).toEqual({
         a_number: 1,
         b_number: 2,
@@ -30,7 +30,7 @@ describe('BigNumJSON', () => {
     });
 
     test('JSON with big numbers in a string', () => {
-      const parsedObject = BigNumJSON.parse('{"a_number": 1, "b_number": 2, "fake_bigints_string": "123456789123456789,1234567891234567891,1234567891234567892,1234567891234567893" }');
+      const parsedObject = BigJason.parse('{"a_number": 1, "b_number": 2, "fake_bigints_string": "123456789123456789,1234567891234567891,1234567891234567892,1234567891234567893" }');
       expect(parsedObject).toEqual({
         a_number: 1,
         b_number: 2,
@@ -39,7 +39,7 @@ describe('BigNumJSON', () => {
     });
 
     test('JSON_STRING_INJECTION test', () => {
-      const parsedObject = BigNumJSON.parse(`{
+      const parsedObject = BigJason.parse(`{
         "A": 123123,
         "B": "123123",
         "C": "C111",
@@ -105,7 +105,7 @@ describe('BigNumJSON', () => {
         boolean: false
       };
   
-      expect(BigNumJSON.stringify(objectToStringify)).toEqual('{"longNumber":"123456789012345678901234567890","regularNumber":123,"string":"qwerty","boolean":false}');
+      expect(BigJason.stringify(objectToStringify)).toEqual('{"longNumber":"123456789012345678901234567890","regularNumber":123,"string":"qwerty","boolean":false}');
     });
   });
 });
