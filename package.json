@@ -1,6 +1,6 @@
 {
   "name": "big-jason",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON.parse but uses BigInt for big numbers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
