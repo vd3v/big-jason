@@ -66,7 +66,7 @@ const parse = (jsonString: string) => {
         }
         return parseWithBigInt(jsonString);
     } catch (error) {
-        throw new Error('bigintjson: parsing error: ' + error);
+        throw new Error('bignumjson: parsing error: ' + error);
     }
 };
 
@@ -76,6 +76,6 @@ const stringify = (serializableObject: unknown) => JSON.stringify(serializableOb
         : value // return everything else unchanged
 );
 
-export const BigIntJSON = {
+export const BigNumJSON = {
     parse, stringify
 };

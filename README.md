@@ -1,12 +1,12 @@
 ### Getting Started
 
-`npm install bigintjson`
+`npm install bignumjson`
 
 ### Usage
 
 ```javascript
-import { BigIntJSON } from 'bigintjson'
+import { BigNumJSON } from 'bignumjson'
 
-const parsed = BigIntJSON.parse(exampleJSONString)
-const stringified = BigIntJSON.stringify(exampleObject)
+const parsed = BigNumJSON.parse(exampleJSONString)
+const stringified = BigNumJSON.stringify(exampleObject)
 ```

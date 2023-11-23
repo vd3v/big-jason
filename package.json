@@ -1,5 +1,5 @@
 {
-  "name": "bigintjson",
+  "name": "bignumjson",
   "version": "1.0.0",
   "description": "JSON.parse but uses BigInt for big numbers",
   "main": "lib/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vd3v/bigintjson.git"
+    "url": "git+https://github.com/vd3v/bignumjson.git"
   },
   "files": [
     "lib/**/*"
@@ -33,9 +33,9 @@
   "author": "vd3v",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vd3v/bigintjson/issues"
+    "url": "https://github.com/vd3v/bignumjson/issues"
   },
-  "homepage": "https://github.com/vd3v/bigintjson#readme",
+  "homepage": "https://github.com/vd3v/bignumjson#readme",
   "devDependencies": {
     "@types/jest": "^29.5.10",
     "@types/node": "^20.9.4",
